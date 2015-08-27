@@ -1,7 +1,8 @@
 html
 {
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(230, 230, 230);
   font-family: sans-serif;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6
@@ -53,7 +54,7 @@ input
   font-size: 2.58461538vw;
   padding: 0.8em;
   background-color: rgb(200, 200, 200);
-  border-radius: 20px;
+  border-radius: 1em;
   transition: box-shadow 0.5s ease;
 }
 
@@ -65,4 +66,26 @@ input:focus
 input[type="submit"]:hover
 {
   box-shadow: 5px 5px 5px rgb(170, 170, 170);
+}
+
+input[type="text"]
+{
+  background-color: white;
+}
+
+select
+{
+  padding: 1em;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.side-by-side
+{
+  display: inline-block;
+}
+
+.side-by-side select
+{
+  display: inline;
 }
