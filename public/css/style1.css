@@ -1,0 +1,100 @@
+html
+{
+  background-color: rgb(230, 230, 230);
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  text-align: center;
+  white-space: nowrap;
+}
+
+h1
+{
+  font-size: 4.2vw;
+}
+
+h2
+{
+  font-size: 1.2vw;
+}
+
+p
+{
+  font-size: 1.5vw;
+  width 600px;
+  margin: 0 auto;
+}
+
+.centered
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.brackets
+{
+ border: 1px solid black;
+}
+
+.horizontally-centered
+{
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40vw;
+}
+
+img
+{
+  position: relative;
+  width: 41vw;
+  height: auto;
+}
+
+.background-dragon
+{
+  top: 52%;
+  opacity: 0.9;
+}
+
+input
+{
+  font-size: 2.58461538vw;
+  padding: 0.8em;
+  background-color: rgb(200, 200, 200);
+  border-radius: 20px;
+  transition: box-shadow 0.5s ease;
+}
+
+.img_small
+{
+ width: 20%;
+height: auto;
+
+}
+
+.img_medium
+{
+ width: 50%;
+height: auto;
+
+}
+
+input:focus
+{
+  outline: 0;
+}
+
+p
+{
+ width: 50vw;
+}
+
+input[type="submit"]:hover
+{
+  box-shadow: 5px 5px 5px rgb(170, 170, 170);
+}
