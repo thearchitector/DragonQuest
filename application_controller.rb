@@ -27,6 +27,11 @@ class MyApp < Sinatra::Base
     erb :preview_character
   end
 
+  get '/copy_me' do
+    @user_dragon = Dragon.new("Chuck Norris", "Male", "YellowGreen", "Leathery")
+    erb :copy_me
+  end
+
   post '/story/page1' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
     @user_dragon.health=(params["health"])
@@ -39,6 +44,10 @@ class MyApp < Sinatra::Base
     @user_dragon.health=(params["health"])
     @user_dragon.gold=(params["gold"])
     erb :'/story/page2'
+  end
+
+  get '/copy_me' do
+    erb :copy_me
   end
 
   post '/story/page3' do
@@ -159,4 +168,24 @@ class MyApp < Sinatra::Base
     @user_dragon.gold=(params["gold"])
     erb :'/story/page19'
   end
+
+  get '/story/page1' do end
+  get '/story/page2' do end
+  get '/story/page3' do end
+  get '/story/page4' do end
+  get '/story/page5' do end
+  get '/story/page6' do end
+  get '/story/page7' do end
+  get '/story/page8' do end
+  get '/story/page9' do end
+  get '/story/page10' do end
+  get '/story/page11' do end
+  get '/story/page12' do end
+  get '/story/page13' do end
+  get '/story/page14' do end
+  get '/story/page15' do end
+  get '/story/page16' do end
+  get '/story/page17' do end
+  get '/story/page18' do end
+  get '/story/page19' do end
 end

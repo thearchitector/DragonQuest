@@ -3,25 +3,13 @@
   <head>
     <title>Welcome to Dragon!</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-      .colorize-illusion-image
-      {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-    </style>
     <link href="images/favicon.png" rel="shortcut icon" type="image/png" />
   </head>
 
   <body>
     <h1 class = "centered" style = "top: 8%;"><%= @preview_dragon.name %></h1>
     <div class = "centered" style = "width: auto; height: auto; background: <%= @preview_dragon.color %>">
-      <img style = "width: 100; height: auto; margin: 0; padding: 0;" src="images/background-dragon-overlay.png">
+      <img class = "image-overlay" src="images/background-dragon-overlay.png">
     </div>
     <div>
       <form method = "POST" action = "../story/page1">

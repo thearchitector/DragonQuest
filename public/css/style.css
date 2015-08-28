@@ -115,7 +115,7 @@ select
 
 .dioption-preview
 {
-  font-size: 1.8em;
+  font-size: 1.35em;
 }
 
 .float-reset
@@ -145,4 +145,31 @@ select
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.image-overlay
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.health-gold
+{
+  position: absolute;
+  width: 30%;
+  height: 15%;
+  right: 0.25vw;
+  top: 0.25vw;
+}
+
+.health li
+{
+  display: inline;
+  list-style-type: none;
+}
+
+.heart
+{
+  width: 1.8vw;
 }

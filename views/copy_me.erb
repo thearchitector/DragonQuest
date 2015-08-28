@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <!-- here -->
+    <div class = "health-gold">
+      <ul class = "health">
+        <% for i in 0..@user_dragon.health do %>
+        <li> <img align = "center" class = "heart" src = "http://bit.ly/1EXiIKQ"> </li>
+        <% end %>
+      </ul>
+      <p class = "story-paragraph" style = "text-align: right">
+        <%= @user_dragon.gold %>
+        <img align = "right" style = "width: 3vw; margin-right: 11%;" src = "http://bit.ly/1EkWS9u">
+      </p>
+    </div>
+    <!-- to here -->
+  </body>
+</html>
