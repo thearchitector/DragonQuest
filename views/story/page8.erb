@@ -5,6 +5,17 @@
     <title>Dragon!</title>
   </head>
   <body>
+    <div class = "health-gold">
+      <ul class = "health">
+        <% for i in 0..@user_dragon.health do %>
+        <li> <img align = "center" class = "heart" src = "http://bit.ly/1EXiIKQ"> </li>
+        <% end %>
+      </ul>
+      <p class = "story-paragraph" style = "text-align: right">
+        <%= @user_dragon.gold %>
+        <img align = "right" style = "width: 3vw; margin-right: 11%;" src = "http://bit.ly/1EkWS9u">
+      </p>
+    </div>
     <img class = "background-dragon centered" style = "opacity: 0.15" src = "../images/background-dragon.png">
     <img class="centered img_small" style = "top: 10%;" src="../images/Title.png">
     <center><p class="centered story-paragraph" style = "top: 40%;"><b>You search for a while and eventually find a nice cave upon a large mountain its perfect. If you have taken damage you are fully healed. The only problem is that there are not enough riches! How do you get more gold? <br><br>Option #1: I kidnap a princess for ransom money  <br><br>Option #2:I make myself ruler of a kingdom  </b></p></center>

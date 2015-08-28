@@ -5,6 +5,17 @@
     <title>Dragon!</title>
   </head>
   <body>
+    <div class = "health-gold">
+      <ul class = "health">
+        <% for i in 0..@user_dragon.health do %>
+        <li> <img align = "center" class = "heart" src = "http://bit.ly/1EXiIKQ"> </li>
+        <% end %>
+      </ul>
+      <p class = "story-paragraph" style = "text-align: right">
+        <%= @user_dragon.gold %>
+        <img align = "right" style = "width: 3vw; margin-right: 11%;" src = "http://bit.ly/1EkWS9u">
+      </p>
+    </div>
     <img class = "background-dragon centered" style = "opacity: 0.15" src = "../images/background-dragon.png">
     <img class="centered img_small" style = "top: 10%;" src="../images/Title.png">
     <center><p class="centered story-paragraph" style = "top: 40%;"><b>You fly to the nearby kingdom and snatch the princess from her tower and hold her for ransom. The kingdom pays 500 gold! What do you want to do next?
