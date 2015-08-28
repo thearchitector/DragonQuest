@@ -77,7 +77,7 @@ class MyApp < Sinatra::Base
 
   post '/story/page8' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
-    @user_dragon.health=(params["health"].to_i)
+    @user_dragon.health=(9)
     @user_dragon.gold=(params["gold"].to_i)
     erb :'/story/page8'
   end
