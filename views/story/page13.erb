@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <link rel="stylesheet" href = "../css/style.css">
+  <head>
+    <title>Dragon!</title>
+  </head>
+  <body>
+    <img class = "background-dragon centered" style = "opacity: 0.15" src = "../images/background-dragon.png">
+    <img class="centered img_small" style = "top: 10%;" src="../images/Dragon_Cave.png">
+    <center><p class="centered story-paragraph" style = "top: 40%;"><b>You venture toward the tower. After a while you arrive at the large structure. How do you attack?
+
+
+      <br><br>Option #1: I smash into the building and knock it over killing everyone inside
+
+      <br><br>Option #2: I attack strategically infiltrating the tower and kill people inside    </b></p>
+     </center>
+    <img class="centered img_small" style = "top: 80%;" src="../images/knight.png">
+   <form method = "POST" action = "page16">
+      <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
+      <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
+      <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
+      <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
+      <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
+      <input class = "centered" type="submit" style = "top: 80%; left: 30%;" value="Option #1">
+    </form>
+    <form method = "POST" action = "page17">
+      <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
+      <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
+      <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
+      <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
+      <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
+      <input class = "centered" type="submit" style = "top: 80%; left: 70%;" value="Option #2">
+    </form>
+
+  </body>
+</html>

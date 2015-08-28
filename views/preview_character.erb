@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Dragon!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .colorize-illusion-image
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png" />
+  </head>
+
+  <body>
+    <h1 class = "centered" style = "top: 8%;"><%= @preview_dragon.name %></h1>
+    <div class = "centered" style = "width: auto; height: auto; background: <%= @preview_dragon.color %>">
+      <img style = "width: 100; height: auto; margin: 0; padding: 0;" src="images/background-dragon-overlay.png">
+    </div>
+    <div>
+      <form method = "POST" action = "../story/page1">
+        <input name = "name" type = "hidden" value = '<%= @preview_dragon.name %>'>
+        <input name = "sex" type = "hidden" value = '<%= @preview_dragon.sex %>'>
+        <input name = "color" type = "hidden" value = '<%= @preview_dragon.color %>'>
+        <input name = "skin_type" type = "hidden" value = '<%= @preview_dragon.skin_type %>'>
+        <input class = "centered dioption-preview" style = "top: 82%; left: 40%;" type = "submit" value = "Create your Dragon!">
+      </form>
+      <form method = "POST" action = "../create_character">
+        <input name = "name" type = "hidden" value = '<%= @preview_dragon.name %>'>
+        <input name = "sex" type = "hidden" value = '<%= @preview_dragon.sex %>'>
+        <input name = "color" type = "hidden" value = '<%= @preview_dragon.color %>'>
+        <input name = "skin_type" type = "hidden" value = '<%= @preview_dragon.skin_type %>'>
+        <input class = "centered dioption-preview" style = "top: 82%; left: 60%;" type = "submit" value = "Return to Customization...">
+      </form>
+    </div>
+  </body>
+</html>

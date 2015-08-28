@@ -10,22 +10,22 @@
     <h1 class = "centered" style = "top: 8%;">Character Creation:</h1>
     <h2 class = "centered" style = "top: 24%;">Please enter your information:</h2>
     <img class = "background-dragon centered" style = "opacity: 0.15" src = "../images/background-dragon.png">
-    <form method = "POST" action = "../story/page1">
+    <form id = "character-form" method = "POST" action = "../story/page1">
       <input class = "horizontally-centered" type = "text" name = "name" style = "font-size: 20px; top: 30%;" placeholder = "Enter your dragon's name..." value = '<%= (@random_dragon != nil ? @random_dragon.name : "") %>'>
-      <h2 class = "horizontally-centered" style = "top: 40%;">Enter your dragon's sex...</h2>
+      <h2 class = "horizontally-centered" style = "top: 38%;">Enter your dragon's sex...</h2>
       <p class = "horizontally-centered" style = "top: 44%;">
-      <input type = "radio" name = "sex" value = "male" <%= ((@random_dragon != nil && @random_dragon.sex == "male" )? 'checked' : '') %>> Male
+        <input type = "radio" name = "sex" value = "male" <%= ((@random_dragon != nil && @random_dragon.sex == "male" )? 'checked' : '') %>> Male
         <input type = "radio" name = "sex" value = "female" <%= ((@random_dragon != nil && @random_dragon.sex == "female") ? 'checked' : '') %>> Female
       </p>
       <h2 class = "horizontally-centered" style = "top: 50%;">Select your dragon's skin color and type...</h2>
       <div class = "horizontally-centered side-by-side" style = "top: 58%;">
-        <select required>
+        <select name = "color">
           <option disabled selected>Choose a color...</option>
           <% Dragon.colors.each do |color| %>
-            <option value = '<%= color.gsub(/\W/, "") %>' style = "color: <%= color.gsub(/\W/, "") == "Black" ? "White" : "Black"%> background-color: <%= color.gsub(/\W/, "") %>" <%= (@random_dragon != nil && @random_dragon.color == color) ? 'selected' : '' %>><%= color %></option>
+            <option value = '<%= color.gsub(/\W/, "") %>' style = "background-color: <%= color.gsub(/\W/, "") %>" <%= (@random_dragon != nil && @random_dragon.color == color) ? 'selected' : '' %>><%= color %></option>
           <% end %>
         </select>
-        <select required>
+        <select name = "skin_type">
           <option disabled selected>Choose a skin type...</option>
           <% Dragon.skin_types.each do |type| %>
             <option value = '<%= type %>'<%= (@random_dragon != nil && @random_dragon.skin_type == type) ? 'selected' : '' %>><%= type.capitalize %></option>
@@ -34,8 +34,13 @@
       </div>
       <input class = "horizontally-centered" style = "top: 75%;" type = "submit" value = "Create your Dragon!">
     </form>
-    <form method = "GET" action = "../create_character/random">
-      <input class = "horizontally-centered" style = "font-size: 0.75em; top: 68%;" type = "submit" value = "Randomize!">
-    </form>
+    <div class = "horizontally-centered side-by-side" style = "top: 68%;">
+      <form method = "GET" class = "preview-button" action = "../create_character/random">
+        <input type = "submit" class = "dioption-create" value = "Create Random Dragon!">
+      </form>
+      <input onclick = "change_action()" form = "character-form" type = "submit" class = "dioption-create preview-button" value = "Preview your Dragon!">
+      <script> function change_action() { document.getElementById("character-form").setAttribute("action", "../preview_character"); } </script>
+      <p class = "float-reset"></p>
+    </div>
   </body>
 </html>
