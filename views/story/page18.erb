@@ -18,19 +18,28 @@
     </div>
     <img class = "background-dragon centered" style = "opacity: 0.15" src = "../images/background-dragon.png">
     <img class="centered img_small" style = "top: 10%;" src="../images/Title.png">
-    <center><p class="centered story-paragraph" style = "top: 40%;"><b>You and your army charge the city and an epic battle begins. Your spearmen run forward smashing their sharp spears through the heart of the enemy. They begin to retreat. You then blast a hole in their wall using your trebuchets. However, once you enter you realise it is an ambush! You lose 6 health. Your army pushes on and you manage to recover and retreat stealing 500 gold! THE END
+    <center><p class="centered story-paragraph" style = "top: 20%;"><b>You and your army charge the city and an epic battle begins. Your spearmen run forward smashing their sharp spears through the heart of the enemy. They begin to retreat. You then blast a hole in their wall using your trebuchets. However, once you enter you realise it is an ambush! You lose 6 health. Your army pushes on and you manage to recover and retreat stealing 500 gold! THE END
 
 </b></p>
      </center>
     <img class="centered img_small" style = "top: 60%;" src="../images/Battle.png">
-    <form method = "POST" action = "page1">
+   <form method = "POST" action = "page1">
+      <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
+      <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
+     <input name = "color" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.color %>'>
+      <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
+      <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
+      <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
+      <input class = "centered" type="submit" style = "top: 80%; left: 30%;" value="Play Again?">
+    </form>
+    <form method = "POST" action = "../character_create">
       <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
       <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
       <input name = "color" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.color %>'>
       <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
       <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
       <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
-      <input class = "centered" style = "top: 82%;" type = "submit" value = "Play Again?">
+      <input class = "centered" type="submit" style = "top: 80%; left: 70%;" value="Create New Dragon?">
     </form>
 
   </body>
