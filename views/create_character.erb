@@ -11,7 +11,7 @@
     <h2 class = "centered" style = "top: 24%;">Please enter your information:</h2>
     <img class = "background-dragon centered" style = "opacity: 0.15" src = "../images/background-dragon.png">
     <form id = "character-form" method = "POST" action = "../story/page1">
-      <input class = "horizontally-centered" type = "text" name = "name" style = "font-size: 20px; top: 30%;" placeholder = "Enter your dragon's name..." value = '<%= (@random_dragon != nil ? @random_dragon.name : "") %>'>
+      <input class = "horizontally-centered" type = "text" name = "name" style = "font-size: 20px; top: 30%;" placeholder = "Enter your dragon's name..." value = '<%= (@random_dragon != nil ? @random_dragon.name : "") %>' required>
       <h2 class = "horizontally-centered" style = "top: 38%;">Enter your dragon's sex...</h2>
       <p class = "horizontally-centered" style = "top: 44%;">
         <input type = "radio" name = "sex" value = "male" <%= ((@random_dragon != nil && @random_dragon.sex == "male" )? 'checked' : '') %>> Male
@@ -19,13 +19,13 @@
       </p>
       <h2 class = "horizontally-centered" style = "top: 50%;">Select your dragon's skin color and type...</h2>
       <div class = "horizontally-centered side-by-side" style = "top: 58%;">
-        <select name = "color">
+        <select name = "color" required>
           <option disabled selected>Choose a color...</option>
           <% Dragon.colors.each do |color| %>
             <option value = '<%= color.gsub(/\W/, "") %>' style = "background-color: <%= color.gsub(/\W/, "") %>" <%= (@random_dragon != nil && @random_dragon.color == color) ? 'selected' : '' %>><%= color %></option>
           <% end %>
         </select>
-        <select name = "skin_type">
+        <select name = "skin_type" required>
           <option disabled selected>Choose a skin type...</option>
           <% Dragon.skin_types.each do |type| %>
             <option value = '<%= type %>'<%= (@random_dragon != nil && @random_dragon.skin_type == type) ? 'selected' : '' %>><%= type.capitalize %></option>
