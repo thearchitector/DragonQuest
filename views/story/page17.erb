@@ -20,7 +20,15 @@
     <center><p class="centered story-paragraph" style = "top: 40%;"><b>You are able to make it inside. You venture to his vault and steal 600 gold! As you are escaping you are confronted by the wizard. He summons a beam of light that strikes you and does 6 damage. You make it out with your life and a good sum of gold. You go back to your lair and bathe in your wealth. THE END
 </b></p>
      </center>
-    <img class="centered img_small" style = "top: 80%;" src="../images/Mage.png">
-
+    <img class="centered img_small" style = "top: 60%;" src="../images/Mage.png">
+    <form method = "POST" action = "page1">
+      <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
+      <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
+      <input name = "color" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.color %>'>
+      <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
+      <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
+      <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
+      <input class = "centered" style = "top: 82%;" type = "submit" value = "Play Again?">
+    </form>
   </body>
 </html>

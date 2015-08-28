@@ -21,8 +21,16 @@
     <center><p class="centered story-paragraph" style = "top: 40%;"><b>You begin to slaughter all of the kingdom’s bravest knights. As the kingdom falls the the king begs your soldiers to betray you in return for riches. Your own soldiers betray you and aim their weapons at you. Fueled with anger you launch a fireball that disintegrates everyone human living near you. THE END
 </b></p>
      </center>
-    <img class="centered img_small" style = "top: 80%;" src="http://24.media.tumblr.com/5e69121c7365642014672ecdd4847f31/tumblr_myn2aoTktU1rzuv61o2_250.gif">
-
+    <img class="centered img_small" style = "top: 60%;" src="http://24.media.tumblr.com/5e69121c7365642014672ecdd4847f31/tumblr_myn2aoTktU1rzuv61o2_250.gif">
+    <form method = "POST" action = "page1">
+      <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
+      <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
+      <input name = "color" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.color %>'>
+      <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
+      <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
+      <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
+      <input class = "centered" style = "top: 82%;" type = "submit" value = "Play Again?">
+    </form>
 
   </body>
 </html>

@@ -21,8 +21,16 @@
     <center><p class="centered story-paragraph" style = "top: 40%;"><b>You flop your <%= @user_dragon.skin_type %> wings as hard as you can and smash into the side of the tower. Unfortunately the tower doesn't budge and you flop to the ground. You lose 6 health. The wizard then captures you and locks you away in his dungeon casting an entrapment spell so you can never escape. THE END
 </b></p>
      </center>
-    <img class="centered img_small" style = "top: 80%;" src="../images/wizard_tower.png">
-
+    <img class="centered img_small" style = "top: 60%;" src="../images/wizard_tower.png">
+    <form method = "POST" action = "page1">
+      <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
+      <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
+      <input name = "color" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.color %>'>
+      <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
+      <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
+      <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
+      <input class = "centered" style = "top: 82%;" type = "submit" value = "Play Again?">
+    </form>
 
   </body>
 </html>

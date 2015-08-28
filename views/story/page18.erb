@@ -22,8 +22,16 @@
 
 </b></p>
      </center>
-    <img class="centered img_small" style = "top: 80%;" src="../images/Battle.png">
-
+    <img class="centered img_small" style = "top: 60%;" src="../images/Battle.png">
+    <form method = "POST" action = "page1">
+      <input name = "name" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.name %>'>
+      <input name = "sex" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.sex %>'>
+      <input name = "color" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.color %>'>
+      <input name = "skin_type" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.skin_type %>'>
+      <input name = "health" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.health %>'>
+      <input name = "gold" class = "hidden-input" type = "hidden" value = '<%= @user_dragon.gold %>'>
+      <input class = "centered" style = "top: 82%;" type = "submit" value = "Play Again?">
+    </form>
 
   </body>
 </html>

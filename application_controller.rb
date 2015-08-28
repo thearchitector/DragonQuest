@@ -70,7 +70,7 @@ class MyApp < Sinatra::Base
 
   post '/story/page7' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
-    @user_dragon.health=(params["health"].to_i)
+    @user_dragon.health=(params["health"].to_i - 2)
     @user_dragon.gold=(params["gold"].to_i + 200)
     erb :'/story/page7'
   end
@@ -98,15 +98,15 @@ class MyApp < Sinatra::Base
 
   post '/story/page11' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
-    @user_dragon.health=(params["health"].to_i)
-    @user_dragon.gold=(params["gold"].to_i)
+    @user_dragon.health=(params["health"].to_i - 3)
+    @user_dragon.gold=(params["gold"].to_i + 400)
     erb :'/story/page11'
   end
 
   post '/story/page12' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
     @user_dragon.health=(params["health"].to_i)
-    @user_dragon.gold=(params["gold"].to_i)
+    @user_dragon.gold=(params["gold"].to_i + 500)
     erb :'/story/page12'
   end
 
@@ -133,21 +133,21 @@ class MyApp < Sinatra::Base
 
   post '/story/page16' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
-    @user_dragon.health=(params["health"].to_i)
+    @user_dragon.health=(params["health"].to_i - 6)
     @user_dragon.gold=(params["gold"].to_i)
     erb :'/story/page16'
   end
 
   post '/story/page17' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
-    @user_dragon.health=(params["health"].to_i)
+    @user_dragon.health=(params["health"].to_i - 6)
     @user_dragon.gold=(params["gold"].to_i + 600)
     erb :'/story/page17'
   end
 
   post '/story/page18' do
     @user_dragon = Dragon.new(params["name"], params["sex"], params["color"], params["skin_type"])
-    @user_dragon.health=(params["health"].to_i)
+    @user_dragon.health=(params["health"].to_i - 6)
     @user_dragon.gold=(params["gold"].to_i + 500)
     erb :'/story/page18'
   end
